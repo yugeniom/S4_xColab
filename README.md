@@ -43,6 +43,10 @@ __bootstrap__()
 ```
 from google.colab import drive
 import sys
+!pip uninstall numpy
+!pip uninstall scipy
+!pip install numpy==1.26.4
+!pip install scipy==1.13.1
 drive.mount('/content/gdrive')
 %cd /content/gdrive/MyDrive/S4all
 sys.path.append('/content/gdrive/MyDrive/S4all/libraries/')
