@@ -56,7 +56,9 @@ sys.path.append('/content/gdrive/MyDrive/S4all/libraries/')
 
 import S4
 ```
-5bis) Mind that your will be asked to grant access to GDrive and to reinstall blas and fftw libraries every time you disconnect your Colab Notebook; this normally happens automatically after a few minutes of inactivity, so you'd better trick Google into thinking that you are always active while the Notebook is open; you can do that adding this line in a cell following your whole code:
+5bis) You will receive an error message the first time you run the code on the machine, as Colab will erroneously load Numpy 2 instead of Numpy 1. After you gte the error just hit "Runtime" --> "Restart session and run all".
+
+5tris) Mind that your will be asked to grant access to GDrive and to reinstall blas and fftw libraries every time you disconnect your Colab Notebook; this normally happens automatically after a few minutes of inactivity, so you'd better trick Google into thinking that you are always active while the Notebook is open; you can do that adding this line in a cell following your whole code:
 ```
 while True:pass
 ```
