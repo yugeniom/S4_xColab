@@ -99,7 +99,7 @@ S4r_LIBNAME = $(OBJDIR)/libS4r.a
 BOOST_PREFIX=/content/gdrive/MyDrive/S4all/S4_xColab/S4
 BOOST_INC = -I$(BOOST_PREFIX)/include
 BOOST_LIBS = -L$(BOOST_PREFIX)/lib/ -lboost_serialization
-BOOST_URL=https://archives.boost.io/release/1.65.1/source/boost_1_65_1.tar.gz
+BOOST_URL=https://sourceforge.net/projects/boost/files/boost/1.74.0/boost_1_74_0.tar.gz
 BOOST_FILE=boost.tar.gz
 # Target for downloading boost from above URL
 $(BOOST_FILE):
