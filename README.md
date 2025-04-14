@@ -3,10 +3,16 @@ HOWTO install S4 permanently on Google Drive and run it in Cloud with Colab Note
 
 1) Create the "S4all" program folder on your Gdrive and a "libraries" subfolder. Please use these exact names; if you want to change the folder names, you will have to edit the Makefile)
 
-2) Open an empty Colab notebook, type this and run (Google will ask your permission to access your Drive, grant it):
+2) Open an empty Colab notebook, type the following and run (Google will ask your permission to access your Drive, grant it). You will receive an error message, as Colab will erroneously load Numpy 2 instead of Numpy 1 at the first run. After you get the error, just hit "Runtime" --> "Restart session and run all".
 ```
 from google.colab import drive
 import os, sys
+!pip install --force-reinstall scipy==1.12.0
+import numpy as np
+print(np.__version__)
+if int(np.__version__[0]) > 1:
+  import os
+  os.kill(os.getpid(), 9)
 drive.mount('/content/gdrive')
 %cd /content/gdrive/MyDrive/S4all
 lib_path = '/content/gdrive/MyDrive/S4all/libraries'
@@ -42,7 +48,7 @@ __bootstrap__()
 5) S4_xColab is now permanently installed on your Google Drive. To create a simulation, create a new Colab Notebook with the following heading cell, followed by your own simulation code:
 ```
 from google.colab import drive
-import sys
+import os, sys
 !pip install --force-reinstall scipy==1.12.0
 import numpy as np
 print(np.__version__)
