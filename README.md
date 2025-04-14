@@ -45,7 +45,7 @@ def __bootstrap__():
 __bootstrap__()
 ```
 
-5) S4_xColab is now permanently installed on your Google Drive. To create a simulation, create a new Colab Notebook with the following heading cell, followed by your own simulation code:
+5) S4_xColab is now permanently installed on your Google Drive. You could need to close all and logout from google, then wait some time (even several hours) for Gdrive to sync the newly intalled .so libraries in the "libraries" folder. When you see the .so files in libraries, S4xColab is ready to actually run. To create a simulation, open a new Colab Notebook with the following heading cell, followed by your own simulation code:
 ```
 from google.colab import drive
 import os, sys
