@@ -25,7 +25,7 @@ sys.path.insert(0,lib_path)
 
 2) Clone this repository, typing in a new cell:
 ```
-git clone https://github.com/yugeniom/S4_xColab.git
+!git clone https://github.com/yugeniom/S4_xColab.git
 ```
 3) cd into the S4_xColab folder and compile it all (please grab a drink, this will take "some" time):
 ```
